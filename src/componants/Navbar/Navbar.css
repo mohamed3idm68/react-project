@@ -1,0 +1,38 @@
+
+
+.Navbar{
+    padding: 20px 0;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #000;
+   
+   
+}
+
+.Navbar .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ul-list  {
+    display: flex;
+    list-style: none;
+   
+}
+
+.ul-list li {
+    margin: 10px;
+   
+}
+
+.ul-list li a {
+    text-decoration: none;
+    color:black;
+    font-size: 15 px;
+}
+
+.ul-list li a:hover {
+    color:red;
+}
