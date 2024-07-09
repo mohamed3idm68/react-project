@@ -8,7 +8,7 @@ function Home() {
     <HomeSection>
       <div className="container">
         <HomeInfo>
-          <H2 className="home-title margin-bottom">Hamza Nabil</H2>
+          <H2 className="home-title margin-bottom">Mo eid</H2>
           <H4 className="home-info">Creative Director</H4>
           <P className="home-desc">
             Iam a professional <Span>UX Designer</Span> and Front-End Developer
