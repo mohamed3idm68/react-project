@@ -1,50 +1,69 @@
-import "./Work.css"
+import { Component } from "react";
+import "./Work.css";
+import axios from "axios";
 
 
 
-function Work() {
-  return (
-    <div className="work">
-      <div className="container">
-        <h2 className="work-title">
-          <span>My</span> Work
-        </h2>
-        <div className="part first">
-          <i className="icon fa fa-chain fa-2x"></i>
-          <h4 className="part-title">Mobile Ux</h4>
-          <hr className="line" />
-          <p className="part-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            quos omnis voluptas ea ipsam! Voluptas.
-          </p>
+class Work extends Component {
+
+
+  state = {
+    works: []
+  }
+
+  componentDidMount() {
+    axios.get("js/data.json").then(res => this.setState({works: res.data.works}))
+  }
+
+  render() {
+
+  const {works} = this.state;
+
+
+  const WorksList = works.map((work) => {
+    return (
+      
+                 <div className="part first">
+                    <i className={work.icon_name}></i>
+                    <h4 className="part-title">{work.title}</h4>
+                    <hr className="line" />
+                    <p className="part-desc">
+                    {work.body}
+                    </p>
+                  </div>
+
+             )
+
+    })
+
+
+
+
+    return (
+     
+      <div className="work">
+           <div className="container">
+                  <h2 className="work-title">
+                    <span>My</span> Work
+                  </h2>
+                  {WorksList}
+             </div>
+        
         </div>
+          
+          
+        
+    
+    )
 
-        <div className="part">
-          <i className="icon fa fa-bolt fa-2x"></i>
-          <h4 className="part-title">Mobile Ux</h4>
-          <hr className="line" />
-          <p className="part-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            quos omnis voluptas ea ipsam! Voluptas.
-          </p>
-        </div>
+    }
+ 
+    
 
-        <div className="part last">
-          <i className="icon fa fa-tachometer fa-2x"></i>
-          <h4 className="part-title">Mobile Ux</h4>
-          <hr className="line" />
-          <p className="part-desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
-            quos omnis voluptas ea ipsam! Voluptas.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default Work;
+  }
+    
 
     
-  
-  
+    
+
+export default Work;
