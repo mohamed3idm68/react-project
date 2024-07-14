@@ -14,7 +14,6 @@
 }
 
 .work .part {
-    margin-top: 20px;
     width: 30%;
     float: left;
     height: auto;
@@ -22,7 +21,7 @@
     border: 1px solid #888;
     box-sizing: border-box;
     text-align: center;
-    margin-left: 5%
+    margin: 22px;
 }
 
 .work .first {
@@ -70,3 +69,5 @@
         margin-left: 0
     }
 }
+
+

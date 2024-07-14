@@ -1,9 +1,11 @@
-import styled from "styled-components"
+
+import styled from "styled-components";
 
 
 export const HomeSection = styled.div`
   height: 500px;
   background: url("../images/portfolio-img3n.jpg");
+  background: url("../images/bg-img.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -20,12 +22,12 @@ export const HomeInfo = styled.div`
 export const H2 = styled.h2`
   font-size: 60px;
   font-weight: bold;
-  color: #5e5e5e;
+  color: #FFEBEE;
 
   &@media(max-width:768px) {
     font-size: 40px;
     color: #fff;
-  }
+}
 
   &@media (max-width:575px) {
     font-size: 30px;
@@ -45,7 +47,7 @@ export const H4 = styled.h4`
 export const P = styled.p`
   font-size: 20px;
   line-height: 1.5;
-  color: #888;
+  color: #FAFAFA;
   margin-bottom: 20px & @media (max-width: 768px) {
     font-size: 15px;
   }
@@ -53,6 +55,7 @@ export const P = styled.p`
 
 export const Span = styled.span`
   color: #000;
+  font-weight: bold;
 `;
 
 export const Button = styled.button`
