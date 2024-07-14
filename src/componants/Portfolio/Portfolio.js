@@ -17,7 +17,7 @@ function Portfolio() {
 
       <div class="box">
         <div>
-          <img src="images/portfolio-img1.jpg" alt="" />
+          <img src="images/portfolio-img3.jpg" alt="" />
           <p class="overlay">
             <span>Show Image</span>
           </p>
@@ -66,7 +66,7 @@ function Portfolio() {
         </div>
 
         <div>
-          <img src="images/portfolio-img8.jpg" alt="" />
+          <img src="images/portfolio-img8.jpg" alt="" /> 
           <p class="overlay">
             <span>Show Image</span>
           </p>
