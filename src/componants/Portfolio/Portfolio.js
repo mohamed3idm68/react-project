@@ -1,78 +1,44 @@
-import "./portfolio.css"
-
+import { useEffect, useState } from "react";
+import axios from "axios";
+import "./portfolio.css";
 
 function Portfolio() {
+  const [image, setImages] = useState([]);
+
+  useEffect(() => {
+     axios
+      .get("js/data.json")
+      .then(res => {setImages(res.data.portfolio)});
+  }, []);
+
+  const images = image.map((IM) => {
+    return (
+      <div key={IM.id}>
+        <img src={IM.image} alt="" />
+        <p className="overlay">
+          <span>Show Image</span>
+        </p>
+      </div>
+    );
+  });
+
   return (
-    <div class="portfolio">
-      <h2 class="portfolio-title">
+    <div className="portfolio">
+      <h2 className="portfolio-title">
         <span>My</span> Portfolio
       </h2>
-      <ul class="portfolio-list">
-        <li class="portfolio-item active">All</li>
-        <li class="portfolio-item">HTML</li>
-        <li class="portfolio-item">Photoshop</li>
-        <li class="portfolio-item">Wordpress</li>
-        <li class="portfolio-item">Mobile</li>
+      <ul className="portfolio-list">
+        <li className="portfolio-item active">All</li>
+        <li className="portfolio-item">HTML</li>
+        <li className="portfolio-item">Photoshop</li>
+        <li className="portfolio-item">Wordpress</li>
+        <li className="portfolio-item">Mobile</li>
       </ul>
 
-      <div class="box">
-        <div>
-          <img src="images/portfolio-img3.jpg" alt="" />
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
-
-        <div>
-          <img src="images/portfolio-img2.jpg" alt="" />
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
-
-        <div>
-          <img src="images/portfolio-img3.jpg" alt="" />
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
-
-        <div>
-          <img src="images/portfolio-img4.jpg" alt="" />
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
-
-        <div>
-          <img src="images/portfolio-img5.jpg" alt="" />
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
-
-        <div>
-          <img src="images/portfolio-img6.jpg" alt="" />
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
-
-        <div>
-          <img src="images/portfolio-img7.jpg" alt="" />
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
-
-        <div>
-          <img src="images/portfolio-img8.jpg" alt="" /> 
-          <p class="overlay">
-            <span>Show Image</span>
-          </p>
-        </div>
+      <div className="box">
+            {images}  
       </div>
-    </div>
+  </div>
   );
 }
 

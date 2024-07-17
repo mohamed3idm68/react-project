@@ -23,7 +23,7 @@ class Work extends Component {
   const WorksList = works.map((work) => {
     return (
       
-                 <div className="part first">
+                 <div className="part first" key={work.id}>
                     <i className={work.icon_name}></i>
                     <h4 className="part-title">{work.title}</h4>
                     <hr className="line" />
