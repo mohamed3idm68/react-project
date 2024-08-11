@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const HomeSection = styled.div`
   height: 500px;
-  background: url("../images/portfolio-img3n.jpg");
   background: url("../images/bg-img.jpg");
   background-size: cover;
   background-position: center;
