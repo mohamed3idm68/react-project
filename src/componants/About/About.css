@@ -1,11 +1,12 @@
 
 .creative {
     height: 500px;
-    background: url("../images/about-img.jpg");
+    background: url("../../../public/images/about-img.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     overflow: hidden;
+    padding:100px;
 }
 
 .creative .creative-info {

@@ -23,7 +23,7 @@ function Portfolio() {
   });
 
   return (
-    <div className="portfolio">
+    <div id="Portfolio" className="portfolio">
       <h2 className="portfolio-title">
         <span>My</span> Portfolio
       </h2>

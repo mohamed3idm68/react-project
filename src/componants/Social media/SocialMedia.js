@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import {socialMedia , Social , Icon , P , SpanInfo1 , SpanInfo2} from "./social.js"
+import {
+  socialMedia,
+  Social,
+  Icon,
+  P,
+  SpanInfo1,
+  SpanInfo2,
+} from "./social.js";
 
 function SocialMedia() {
   const [data, setData] = useState([]);
@@ -14,7 +21,7 @@ function SocialMedia() {
   const myData = data.map((i) => {
     return (
       <>
-        <Social  item = {i.id} key={i.id} >
+        <Social item={i.id} key={i.id}>
           <Icon className={i.icon}></Icon>
           <P>
             <SpanInfo1 className="info1">{i.title}</SpanInfo1>
@@ -28,7 +35,7 @@ function SocialMedia() {
   return (
     <>
       <socialMedia>
-         {myData}
+        <container>{myData}</container>
       </socialMedia>
     </>
   );

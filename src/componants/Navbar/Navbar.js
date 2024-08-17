@@ -12,24 +12,24 @@ function Navbar() {
         </div>
         <ul className="ul-list">
           <li className="list-item">
-            <Link exact to="/">
+            <Link id= "Home" exact to="/">
               Home
             </Link>
           </li>
-          <li className="list-item">
-            <a href="#">Work</a>
+          <li  className="list-item">
+            <a href="#work">Work</a>
           </li>
           <li className="list-item">
-            <a href="#">Portfolio</a>
+            <a href="#Portfolio">Portfolio</a>
           </li>
           <li className="list-item">
-            <a href="#">Resume</a>
+            <a href="#Resume">Resume</a>
           </li>
           <li className="list-item">
-            <a href="#">About</a>
+            <a href="#About">About</a>
           </li>
           <li className="list-item">
-            <Link to="/contact">Contact</Link>
+            <Link  to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
